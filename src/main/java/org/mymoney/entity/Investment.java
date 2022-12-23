@@ -1,10 +1,13 @@
-package org.mymoney;
+package org.mymoney.entity;
+
+import org.mymoney.enums.FundType;
 
 public class Investment {
-    private String id;
+    private FundType fundType;
     private float sharePercentage;
     private int startingAmount;
     private int sipAmount;
+
     public Investment(int startingAmount) {
         this.startingAmount = startingAmount;
     }
@@ -31,5 +34,15 @@ public class Investment {
 
     public void setSipAmount(int sipAmount) {
         this.sipAmount = sipAmount;
+    }
+
+    @Override
+    public String toString() {
+        return "Investment{" +
+                "fundType=" + fundType +
+                ",\nsharePercentage=" + sharePercentage +
+                ",\nstartingAmount=" + startingAmount +
+                ",\nsipAmount=" + sipAmount +
+                '}';
     }
 }

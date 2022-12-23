@@ -2,28 +2,53 @@ package org.mymoney.pojo;
 
 import org.mymoney.enums.FundType;
 
-public class FundValueRequest {
-    private FundType fundType;
-    private int value;
+import java.time.Month;
+import java.util.ArrayList;
 
-    public FundValueRequest(FundType fundType, int value) {
-        this.fundType = fundType;
-        this.value = value;
+public class FundChangeRequest {
+    private ArrayList<FundChange> fundChangeList;
+    private final Month month;
+
+    public FundChangeRequest(Month month) {
+        this.month = month;
     }
 
-    public FundType getFundType() {
-        return fundType;
+    public Month getMonth() {
+        return month;
     }
 
-    public void setFundType(FundType fundType) {
-        this.fundType = fundType;
+    public ArrayList<FundChange> getFundChangeList() {
+        return fundChangeList;
     }
 
-    public int getValue() {
-        return value;
+    public void addFundChange(FundType fundType, float value) {
+        if (fundChangeList == null) fundChangeList = new ArrayList<>();
+        fundChangeList.add(new FundChange(fundType, value));
     }
 
-    public void setValue(int value) {
-        this.value = value;
+    public class FundChange {
+        private FundType fundType;
+        private float value;
+
+        public FundChange(FundType fundType, float value) {
+            this.fundType = fundType;
+            this.value = value;
+        }
+
+        public FundType getFundType() {
+            return fundType;
+        }
+
+        public void setFundType(FundType fundType) {
+            this.fundType = fundType;
+        }
+
+        public float getValue() {
+            return value;
+        }
+
+        public void setValue(float value) {
+            this.value = value;
+        }
     }
 }

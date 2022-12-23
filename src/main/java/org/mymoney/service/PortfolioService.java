@@ -1,48 +1,64 @@
-package org.mymoney;
+package org.mymoney.service;
+
+import org.mymoney.entity.User;
+import org.mymoney.pojo.FundChangeRequest;
+import org.mymoney.pojo.FundValueRequest;
+import org.mymoney.utils.Constant;
 
 import java.time.Month;
+import java.util.ArrayList;
 
-public class Portfolio {
-    private User user;
+public class PortfolioService {
+    private final User user;
     private int netWorth;
-    private PortfolioManager portfolioManager;
+    private final PortfolioManager portfolioManager;
 
-    public Portfolio(User user) {
+    public PortfolioService(User user) {
         this.user = user;
+        this.portfolioManager = new PortfolioManager();
     }
 
-    public void allocate(int equityFund,
-                         int goldFund,
-                         int debtFund){
-        portfolioManager.addAllocationToPortFolio(FundType.EQUITY,equityFund);
-        portfolioManager.addAllocationToPortFolio(FundType.GOLD,goldFund);
-        portfolioManager.addAllocationToPortFolio(FundType.DEBT,debtFund);
+    public void allocate(ArrayList<FundValueRequest> fundValueRequests) {
+        for (FundValueRequest fundValueRequest : fundValueRequests) {
+            portfolioManager.addAllocationToPortFolio(fundValueRequest.getFundType(), fundValueRequest.getValue());
+        }
         portfolioManager.computeAllocationShares();
     }
 
-
-    public void sip(int equitySip,
-                    int goldSip,
-                    int debtSip){
-        portfolioManager.setSip(FundType.EQUITY, equitySip);
-        portfolioManager.setSip(FundType.GOLD, goldSip);
-        portfolioManager.setSip(FundType.DEBT, debtSip);
+    public void sip(ArrayList<FundValueRequest> fundValueRequests) {
+        for (FundValueRequest fundValueRequest : fundValueRequests) {
+            portfolioManager.setSip(fundValueRequest.getFundType(), fundValueRequest.getValue());
+        }
     }
 
-    public void change(float equityChange,
-                       float goldChange,
-                       float debtChange,
-                       Month month){
-        portfolioManager.adjustChange(month, FundType.EQUITY, equityChange);
-        portfolioManager.adjustChange(month, FundType.GOLD, goldChange);
-        portfolioManager.adjustChange(month, FundType.DEBT, debtChange);
+    public void change(FundChangeRequest fundChangeRequest) {
+        Month month = fundChangeRequest.getMonth();
+        for (FundChangeRequest.FundChange fundChange : fundChangeRequest.getFundChangeList()) {
+            portfolioManager.adjustChange(month, fundChange.getFundType(), fundChange.getValue());
+        }
+        rebalanceIfApplicable(month);
     }
 
-    public void getBalance(Month month){
-        portfolioManager.getBalance(month);
+    private void rebalanceIfApplicable(Month month) {
+        if (month.equals(Month.JUNE) || month.equals(Month.DECEMBER))
+            portfolioManager.rebalance();
     }
 
-    public void rebalance(){
-        portfolioManager.rebalance();
+    public void getBalance(Month month) {
+        portfolioManager.printBalance(month);
+    }
+
+    public void rebalance() {
+        Month month = portfolioManager.getLatestMonth();
+        if (!month.equals(Month.JUNE) && !month.equals(Month.DECEMBER)) {
+            System.out.println(Constant.CANNOT_REBALANCE_STR);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "PortfolioService{" +
+                "portfolioManager=" + portfolioManager +
+                '}';
     }
 }

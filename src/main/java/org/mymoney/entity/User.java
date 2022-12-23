@@ -1,8 +1,8 @@
-package org.mymoney;
+package org.mymoney.entity;
 
 public class User {
-    private String name;
-    private String email;
+    private final String name;
+    private final String email;
 
     public User(String name, String email) {
         this.name = name;

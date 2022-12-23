@@ -1,30 +1,52 @@
-package org.mymoney;
+package org.mymoney.entity;
 
-import java.util.concurrent.ConcurrentHashMap;
+import org.mymoney.enums.FundType;
+
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
 
 public class LedgerPassbook {
 
     private int monthlyBalance;
-    private ConcurrentHashMap<FundType,Integer> ledger;
+    private final TreeMap<FundType, Integer> ledger;
 
     public LedgerPassbook() {
-        this.ledger = new ConcurrentHashMap<>();
+        this.ledger = new TreeMap<>();
     }
 
-    public void addEntry(FundType fundType, Integer value){
-        this.ledger.put(fundType,value);
+    public void addEntry(FundType fundType, Integer value) {
+        this.ledger.put(fundType, value);
         monthlyBalance += value;
     }
 
-    public int readValueForFund(FundType fundType){
-        return this.ledger.get(fundType);
+    public void updateEntry(FundType fundType, Integer value) {
+        int diff = value - this.ledger.get(fundType);
+        this.ledger.replace(fundType, value);
+        monthlyBalance += diff;
     }
 
-    public int getMonthlyBalance(){
+    public int readValueForFund(FundType fundType) {
+        int value = 0;
+        if (this.ledger.containsKey(fundType)) value = this.ledger.get(fundType);
+        return value;
+    }
+
+    public int getMonthlyBalance() {
         return monthlyBalance;
     }
 
-    public void replaceEntry(FundType fundType, Integer value){
-        Integer replace = this.ledger.replace(fundType, value);
+    public Set<Map.Entry<FundType, Integer>>
+
+    getLedgerEntries() {
+        return ledger.entrySet();
+    }
+
+    @Override
+    public String toString() {
+        return "LedgerPassbook{" +
+                "monthlyBalance=" + monthlyBalance +
+                ", ledger=" + ledger.toString() +
+                '}';
     }
 }

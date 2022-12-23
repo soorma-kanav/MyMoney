@@ -1,42 +1,28 @@
-package org.example;
+package org.mymoney;
 
-import org.junit.jupiter.api.*;
+import org.mymoney.entity.User;
+import org.mymoney.enums.ErrorCode;
+import org.mymoney.exception.MyMoneyException;
+import org.mymoney.service.PortfolioFileProcessor;
+import org.mymoney.service.PortfolioService;
 
-import java.util.Optional;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-
         User user = new User("Kanav", "kanav0705@gmail.com");
-        Fund fundEquity = new Fund("equity", FundType.EQUITY);
-        Fund fundGold = new Fund("gold", FundType.GOLD);
-        Fund fundDebt = new Fund("debt", FundType.DEBT);
-        Portfolio portfolio = new Portfolio(user);
-        int amountEquity = 6000;
-        int amountGold = 3000;
-        int amountDebt = 1000;
+        PortfolioService portfolioService = new PortfolioService(user);
 
-        int sum = amountEquity + amountGold + amountDebt;
+        PortfolioFileProcessor portfolioFileProcessor = new PortfolioFileProcessor();
+        portfolioFileProcessor.setPortfolioService(portfolioService);
 
-        float sharePercentageEquity = Math.round(((float) amountEquity/sum));
-        float sharePercentageGold = Math.round(((float) amountGold/sum));
-        float sharePercentageDebt = Math.round(((float) amountDebt/sum));
-
-
-
-/*
-        Investment equity = new Investment("equity",
-                sharePercentageEquity,
-               Fund,
-                6000,
-                300,
-                Month.JANUARY);
-*/
-
-
+        try {
+            if (args.length < 1) throw new MyMoneyException(ErrorCode.FILE_ACCESS_ERROR);
+            String filePath = args[0];
+            portfolioFileProcessor.processInputFile(filePath);
+        } catch (MyMoneyException mmex) {
+            System.out.println(mmex.getMessage());
+        }
     }
 
 }

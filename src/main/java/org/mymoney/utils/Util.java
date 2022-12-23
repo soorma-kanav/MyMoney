@@ -1,10 +1,10 @@
-package org.mymoney;
+package org.mymoney.utils;
 
 import java.util.Optional;
 
 public class Util {
-    public static float roundOffFloat(float input){
-       return (float) (Math.round(input * 100.00) / 100.00);
+    public static float roundOffFloat(float input) {
+        return (float) (Math.round(input * 100.00) / 100.00);
     }
 
     public static String removeLastCharacter(String str) {

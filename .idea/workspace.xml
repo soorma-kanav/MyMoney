@@ -5,15 +5,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec6a52fd-c594-4f62-bf30-d39979b5da09" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/mymoney/service/PortfolioFileProcessorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/mymoney/util/FileUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mymoney/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mymoney/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mymoney/entity/Investment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mymoney/entity/Investment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mymoney/entity/LedgerPassbook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mymoney/entity/LedgerPassbook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mymoney/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mymoney/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mymoney/enums/CommandName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mymoney/enums/CommandName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mymoney/enums/ErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mymoney/enums/ErrorCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mymoney/enums/FundType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mymoney/enums/FundType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mymoney/exception/MyMoneyException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mymoney/exception/MyMoneyException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mymoney/pojo/FundChangeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mymoney/pojo/FundChangeRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mymoney/pojo/FundValueRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mymoney/pojo/FundValueRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mymoney/service/PortfolioCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mymoney/service/PortfolioCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mymoney/service/PortfolioFileProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mymoney/service/PortfolioFileProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mymoney/service/PortfolioManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mymoney/service/PortfolioManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mymoney/service/PortfolioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mymoney/service/PortfolioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mymoney/service/portfoliocommand/AllocatePortfolioCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mymoney/service/portfoliocommand/AllocatePortfolioCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mymoney/service/portfoliocommand/BalancePortfolioCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mymoney/service/portfoliocommand/BalancePortfolioCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mymoney/service/portfoliocommand/ChangePortfolioCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mymoney/service/portfoliocommand/ChangePortfolioCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mymoney/service/portfoliocommand/RebalancePortfolioCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mymoney/service/portfoliocommand/RebalancePortfolioCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mymoney/service/portfoliocommand/SipPortfolioCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mymoney/service/portfoliocommand/SipPortfolioCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mymoney/utils/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mymoney/utils/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mymoney/utils/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mymoney/utils/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/input-001.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/input-001.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/input-002.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/input-002.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/mymoney/service/PortfolioManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/mymoney/service/PortfolioManagerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="module-info" />
+        <option value="Enum" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -23,7 +64,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2Im1b5ohYNHMVlKSPkHwTk1zHRP" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -31,9 +74,161 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "/Users/create/IdeaProjects/MyMoney",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.mymoney.enums" />
+      <recent name="org.mymoney" />
+      <recent name="org.example" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.mymoney.service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.mymoney.pojo" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.PortfolioFileProcessorTest$processInputFile$whenFilePathIsNotCorrect$whenFileIsEmpty.shouldThrowFileNotFoundException">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.mymoney.Main" />
+      <module name="MyMoney" />
+      <option name="PROGRAM_PARAMETERS" value="$PROJECT_DIR$/src/main/resources/input-001.txt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.mymoney.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PortfolioFileProcessorTest$processInputFile$whenFilePathIsNotCorrect$whenFileIsEmpty.shouldThrowFileNotFoundException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyMoney" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.mymoney.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.mymoney.service.PortfolioFileProcessorTest.processInputFile.whenFilePathIsNotCorrect" />
+      <option name="MAIN_CLASS_NAME" value="org.mymoney.service.PortfolioFileProcessorTest$processInputFile$whenFilePathIsNotCorrect$whenFileIsEmpty" />
+      <option name="METHOD_NAME" value="shouldThrowFileNotFoundException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PortfolioFileProcessorTest$processInputFile$whenFilePathIsNotCorrect$whenFilePathIsNull.shouldHaveErrorCodeForFileAccessError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyMoney" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.mymoney.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.mymoney.service.PortfolioFileProcessorTest.processInputFile.whenFilePathIsNotCorrect" />
+      <option name="MAIN_CLASS_NAME" value="org.mymoney.service.PortfolioFileProcessorTest$processInputFile$whenFilePathIsNotCorrect$whenFilePathIsNull" />
+      <option name="METHOD_NAME" value="shouldHaveErrorCodeForFileAccessError" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PortfolioFileProcessorTest$processInputFile$whenFilePathIsNotCorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyMoney" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.mymoney.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.mymoney.service.PortfolioFileProcessorTest.processInputFile" />
+      <option name="MAIN_CLASS_NAME" value="org.mymoney.service.PortfolioFileProcessorTest$processInputFile$whenFilePathIsNotCorrect" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PortfolioFileProcessorTest$processInputFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyMoney" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.mymoney.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.mymoney.service.PortfolioFileProcessorTest" />
+      <option name="MAIN_CLASS_NAME" value="org.mymoney.service.PortfolioFileProcessorTest$processInputFile" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PortfolioFileProcessorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyMoney" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.mymoney.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.mymoney.service" />
+      <option name="MAIN_CLASS_NAME" value="org.mymoney.service.PortfolioFileProcessorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PortfolioManagerTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="MyMoney" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.mymoney.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.mymoney.service" />
+      <option name="MAIN_CLASS_NAME" value="org.mymoney.service.PortfolioManagerTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.PortfolioManagerTest" />
+      <item itemvalue="JUnit.PortfolioFileProcessorTest" />
+      <item itemvalue="JUnit.PortfolioFileProcessorTest$processInputFile" />
+      <item itemvalue="JUnit.PortfolioFileProcessorTest$processInputFile$whenFilePathIsNotCorrect" />
+      <item itemvalue="JUnit.PortfolioFileProcessorTest$processInputFile$whenFilePathIsNotCorrect$whenFileIsEmpty.shouldThrowFileNotFoundException" />
+      <item itemvalue="JUnit.PortfolioFileProcessorTest$processInputFile$whenFilePathIsNotCorrect$whenFilePathIsNull.shouldHaveErrorCodeForFileAccessError" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PortfolioFileProcessorTest$processInputFile$whenFilePathIsNotCorrect$whenFileIsEmpty.shouldThrowFileNotFoundException" />
+        <item itemvalue="JUnit.PortfolioFileProcessorTest" />
+        <item itemvalue="JUnit.PortfolioFileProcessorTest$processInputFile" />
+        <item itemvalue="JUnit.PortfolioFileProcessorTest$processInputFile$whenFilePathIsNotCorrect" />
+        <item itemvalue="JUnit.PortfolioFileProcessorTest$processInputFile$whenFilePathIsNotCorrect$whenFilePathIsNull.shouldHaveErrorCodeForFileAccessError" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -44,5 +239,47 @@
       <updated>1670772016030</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/mymoney/service/portfoliocommand/RebalancePortfolioCommand.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/mymoney/service/PortfolioFileProcessorTest.java</url>
+          <line>96</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/mymoney/service/PortfolioFileProcessorTest.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/mymoney/service/PortfolioFileProcessorTest.java</url>
+          <line>111</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/mymoney/service/PortfolioFileProcessorTest.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/mymoney/service/PortfolioFileProcessorTest.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

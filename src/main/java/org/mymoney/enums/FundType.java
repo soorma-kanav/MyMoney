@@ -1,5 +1,7 @@
-package org.mymoney;
+package org.mymoney.enums;
 
-public enum FundType {
-    EQUITY,GOLD,DEBT;
+public enum
+FundType {
+    EQUITY, DEBT, GOLD
+
 }

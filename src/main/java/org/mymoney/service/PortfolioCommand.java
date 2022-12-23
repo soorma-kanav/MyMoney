@@ -1,24 +1,17 @@
-package org.mymoney;
+package org.mymoney.service;
+
+import org.mymoney.enums.CommandName;
+import org.mymoney.service.portfoliocommand.*;
 
 import java.util.ArrayList;
 
 public abstract class PortfolioCommand {
-    private Portfolio portfolio;
+    protected PortfolioService portfolioService;
 
-    public Portfolio getPortfolio() {
-        return portfolio;
-    }
-
-    public void setPortfolio(Portfolio portfolio) {
-        this.portfolio = portfolio;
-    }
-
-    public abstract void execute(ArrayList<String> args);
-
-    public static PortfolioCommand getInputCommand(String command){
-        if (!command.isBlank()){
+    public static PortfolioCommand getInputCommand(String command) {
+        if (!command.isBlank()) {
             CommandName commandName = CommandName.getCommandName(command);
-            switch (commandName){
+            switch (commandName) {
                 case ALLOCATE:
                     return new AllocatePortfolioCommand();
                 case SIP:
@@ -35,4 +28,10 @@ public abstract class PortfolioCommand {
         }
         return null;
     }
+
+    public void setPortfolioService(PortfolioService portfolioService) {
+        this.portfolioService = portfolioService;
+    }
+
+    public abstract void execute(ArrayList<String> args);
 }
